@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$number-color: #da7701;
+$label-color: gray;
+
+body {
+  background: #36454f;
+  color: white;
+}
+
+i:hover {
+  cursor: pointer;
+  color: silver;
+}
+
+a {
+  color: $number-color;
+}
+
+a:hover {
+  color: $number-color;
+  text-decoration: none;
+}
+
+#clock-rim {
+  background: conic-gradient(white 0%, white 5%, silver 16%, white 23%, white 24%, silver 28%, gray 34%, #666 50%, gray 65%, white 75%) transparent;
+  width: 630px;
+  height: 630px;
+  border-radius: 315px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  #time-progress-bar {
+    background: conic-gradient(green, lime, yellow, orange, orangered, red) transparent;
+    width: 614px;
+    height: 614px;
+    border-radius: 307px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    #clock-container {
+      background: black;
+      border-radius: 300px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 600px;
+      height: 600px;
+
+
+      #title {
+        text-align: center;
+        width: 400px;
+        margin: 100px auto 0px;
+      }
+
+      #lengths-panel {
+        margin: 20px 50px;
+
+        #break-container {
+          width: 200px;
+          text-align: center;
+          margin: auto;
+
+          #break-label {
+            color: $label-color;
+            margin: 0px;
+            font-size: 1.5em;
+          }
+
+          #break-row {
+            margin: auto;
+            height: 50px;
+
+            #break-decrement {
+              font-size: 3em;
+              width: 40px;
+              height: 20px;
+              margin: 0px 5px auto auto;
+            }
+
+            #break-length {
+              color: #DA7701;
+              margin-top: 20px;
+            }
+
+            #break-increment {
+              font-size: 3em;
+              width: 40px;
+              height: 20px;
+              margin: 20px auto auto 5px;
+            }
+          }
+        }
+
+        #session-container {
+          width: 200px;
+          text-align: center;
+          margin: auto;
+
+          #session-label {
+            color: $label-color;
+            margin: 0px;
+            font-size: 1.5em;
+          }
+
+          #session-row {
+            margin: auto;
+            height: 50px;
+
+            #session-decrement {
+              font-size: 3em;
+              width: 40px;
+              height: 20px;
+              margin: 0px 5px auto auto;
+            }
+
+            #session-length {
+              color: $number-color;
+              margin-top: 20px;
+            }
+
+            #session-increment {
+              font-size: 3em;
+              width: 40px;
+              height: 20px;
+              margin: 20px auto auto 5px;
+            }
+          }
+        }
+      }
+
+      #timer-container {
+        width: 400px;
+        height: 155px;
+        margin: auto;
+        text-align: center;
+
+        #timer-label {
+          color: $label-color;
+          margin: 0px;
+          font-size: 2em;
+        }
+
+        #time-left {
+          color: $number-color;
+          font-size: 5em;
+
+        }
+      }
+
+      #start-stop-reset-panel {
+        margin: auto;
+        width: 100px;
+
+        #start_stop {
+          text-align: center;
+          margin: 5px 5px auto 5px;
+          font-size: 2em;
+          height: 30px;
+          width: 40px;
+        }
+
+        #reset {
+          text-align: center;
+          margin: 5px 5px auto 5px;
+          font-size: 2em;
+          height: 30px;
+          width: 40px;
+        }
+
+        @keyframes spin {
+          from {
+            transform: rotate(0deg)
+          }
+          to {
+            transform: rotate(360deg)
+          }
+        }
+      }
+      #author {
+        color: $number-color;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
